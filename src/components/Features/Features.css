@@ -28,8 +28,7 @@
 }
 
 @media (min-width: 768px) {
-
-.description {
+    .description {
         text-align: start;
         width: 30% !important; 
     }

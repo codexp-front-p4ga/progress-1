@@ -3,8 +3,19 @@
     text-align: center;
     padding: 1.5rem 1rem 0;
     background-color: #55d87e;
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+.hero > div {
+    max-width: 200px;
+    width: 60%;
+    margin-bottom: 5%;
 }
 
+.hero > div h1{
+    margin-bottom: 2%;
+}
 .hero__icon {
     display: block;
     max-height: 200px;
@@ -12,12 +23,19 @@
 }
 
 @media(min-width: 768px) {
-    .hero {
+    .hero {  
         display: flex;
         align-items: center;
         justify-content: space-around;
         font-size: 1.5rem;
         text-align: left;
+        flex-direction: row;
+    }
+    
+    .hero > div {
+        max-width: 100%;
+        width: 40%;
+        margin-bottom: 0;
     }
     
     .hero__icon {
@@ -28,6 +46,14 @@
 }
 
 @media(min-width: 992px) {
+    .hero {
+        flex-direction: row;
+    }
+    .hero > div {
+        max-width: auto;
+        width: 32%;
+        margin-bottom: 0;
+    }
     .hero__icon {
         max-height: 400px;
     }
