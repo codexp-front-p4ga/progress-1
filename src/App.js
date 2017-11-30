@@ -12,44 +12,49 @@ endereco: '555. Water Town Court, Holland, MI 49242'
 };
 var vendedor = { nome_vendedor:'Jake Montgomery'};
 
-var service1 = {
+var pedido = '#18801934';
+var progress_code = '3110556';
+
+var veiculo = {
+    ano:'2010',
+    modelo: 'Mini Cooper S',
+    milhas:'31.209',
+    VIN:'000193HHAAO1I345'
+};
+var service = [{
     description: "Tensioner",
     qty: 1,
     price: 45.00,
     amount: 45.00
-};
-
-var service2 = {
+}, {
     description: "Oil Filter",
     qty: 1,
     price: 103.00,
     amount: 103.00
-};
-
-var service3 = {
+}, {
     description: "Bilstein 5100 Shocks",
     qty: 4,
     price: 200.00,
     amount: 800.00
-};
-
-var service4 = {
+}, {
     description: "Labor (per hour)",
     qty: 14,
     price: 70.00,
     amount: 980.00
-};
-var subtotal = (service1.amount + service2.amount + service3.amount + service4.amount);
+}];
+
+
+
+var subtotal = (service[0].amount + service[1].amount + service[2].amount + service[3].amount);
 var tax = (115.68);
 
 var total = (subtotal + tax);
-
 
 export default () => (
   <div className="App">
     <Hero />
     <Features />
-    <Order  empresa={empresa} vendedor={vendedor}/>
+    <Order  empresa={empresa} vendedor={vendedor} service={service}/>
     <Services />
   </div>
 );
