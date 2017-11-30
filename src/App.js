@@ -32,7 +32,9 @@ var service4 = {
     price: 70.00,
     amount: 980.00
 };
+
 var subtotal = (service1.amount + service2.amount + service3.amount + service4.amount);
+
 var tax = (115.68);
 
 var total = (subtotal + tax);
@@ -41,7 +43,7 @@ export default () => (
   <div className="App">
     <Hero />
     <Features />
-    <Order />
+    <Order total={total} tax={tax} subtotal={subtotal} service4={service4} service3={service3} service2={service2} service1={service1}/>
     <Services />
   </div>
 );

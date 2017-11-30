@@ -24,21 +24,27 @@ export default (props) => (
                 <th>Amount</th>
            </tr>
            <tr>
-                <td>{props.service1.qty}</td>
+               <td>{props.service1.description}</td>
+               <td>{props.service1.qty}</td>
+               <td>{props.service1.price}</td>
+               <td>{props.service1.amount}</td>
+           </tr>
+           <tr>
+                <td>{props.service2.description}</td>
                 <td>{props.service2.qty}</td> 
+                <td>{props.service2.price}</td>
+                <td>{props.service2.amount}</td>
+           </tr>
+           <tr>
+                <td>{props.service3.description}</td>
                 <td>{props.service3.qty}</td>
-                <td>{props.service4.qty}</td>
-           </tr>
-           <tr>
-                <td>{props.service1.price}</td>
-                <td>{props.service2.price}</td> 
                 <td>{props.service3.price}</td>
-                <td>{props.service4.price}</td>
+                <td>{props.service3.amount}</td>
            </tr>
            <tr>
-                <td>{props.service1.amount}</td>
-                <td>{props.service2.amount}</td> 
-                <td>{props.service3.amount}</td>
+                <td>{props.service4.description}</td>
+                <td>{props.service4.qty}</td>
+                <td>{props.service4.price}</td>
                 <td>{props.service4.amount}</td>
            </tr>
 
