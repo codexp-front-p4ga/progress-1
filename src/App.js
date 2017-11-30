@@ -43,18 +43,19 @@ var service = [{
     amount: 980.00
 }];
 
-
-
-var subtotal = (service[0].amount + service[1].amount + service[2].amount + service[3].amount);
-var tax = (115.68);
-
-var total = (subtotal + tax);
+var resultado = {
+    subtotal: (service[0].amount + service[1].amount + service[2].amount + service[3].amount),
+    tax: 115.68,
+    total: function(){
+     return this.subtotal + this.tax;   
+    } 
+}
 
 export default () => (
   <div className="App">
     <Hero />
     <Features />
-    <Order  empresa={empresa} vendedor={vendedor} service={service}/>
+    <Order  empresa={empresa} vendedor={vendedor} service={service} resultado={resultado} />
     <Services />
   </div>
 );

@@ -61,6 +61,12 @@ export default (props) => (
 
 
             </table>
+            <div>
+                <p>SUBTOTAL<span>{props.resultado.subtotal}</span></p>
+                <p>TAX<span>{props.resultado.tax}</span></p>
+                <p>TOTAL<span>{props.resultado.subtotal + props.resultado.tax}</span></p>
+            </div>
+
         </div>
         <div className="order__submit">
             <button> approve </button>
